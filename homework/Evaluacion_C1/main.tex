@@ -1,0 +1,140 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{Evaluación Continua N°1}
+\author{---}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Ejercicio 1}
+
+Para un conjunto de datos cuantitativo 
+\[
+(x_1, x_2, \ldots, x_n),
+\]
+identifique las afirmaciones correctas:
+
+\begin{enumerate}
+    \item[a)] 
+    \[
+    \sum_{i=1}^{n-1}(x_i - \bar{x})^2 
+    = \sum_{i=1}^{n-1} x_i^2 - n\bar{x}^2.
+    \]
+
+    \item[b)]
+    \[
+    \sum_{i=1}^{n}(x_i - \bar{x})^2 = 0.
+    \]
+
+    \item[c)]
+    Si $(x_1, \ldots, x_n)$ es un conjunto de datos con media $\bar{x}$, entonces  
+    \[
+    (x_1+3, \ldots, x_n+3) 
+    \quad\text{tiene media}\quad (\bar{x}-3).
+    \]
+
+    \item[d)]
+    Todo conjunto de datos derivado de una variable cuantitativa tiene una media.
+\end{enumerate}
+
+\subsection*{Resolución y demostraciones}
+
+\textbf{Afirmación (a): Falsa.}
+
+La identidad correcta es:
+\[
+\sum_{i=1}^{n}(x_i - \bar{x})^2 = 
+\sum_{i=1}^{n} x_i^2 - n\bar{x}^2.
+\]
+
+Demostración:
+\[
+\begin{aligned}
+\sum_{i=1}^n (x_i - \bar{x})^2 
+&= \sum_{i=1}^n \left( x_i^2 - 2x_i\bar{x} + \bar{x}^2 \right) \\
+&= \sum_{i=1}^n x_i^2 - 2\bar{x}\sum_{i=1}^n x_i + n\bar{x}^2 \\
+&= \sum_{i=1}^n x_i^2 - 2\bar{x}(n\bar{x}) + n\bar{x}^2 \\
+&= \sum_{i=1}^n x_i^2 - n\bar{x}^2.
+\end{aligned}
+\]
+Como el límite superior es $n$ y no $n-1$, la expresión dada es incorrecta.
+
+\vspace{0.3cm}
+
+\textbf{Afirmación (b): Falsa.}
+
+La suma de cuadrados respecto a la media es cero únicamente si
+\[
+x_1 = x_2 = \cdots = x_n = \bar{x}.
+\]
+En un conjunto genérico esto no ocurre. Por tanto, la afirmación es falsa.
+
+\vspace{0.3cm}
+
+\textbf{Afirmación (c): Falsa.}
+
+Sea el nuevo conjunto:
+\[
+y_i = x_i + 3.
+\]
+Entonces:
+\[
+\bar{y} = \frac{1}{n} \sum_{i=1}^n (x_i+3)
+        = \bar{x} + 3.
+\]
+Es decir, sumar una constante aumenta la media en esa constante. No se resta.
+
+\vspace{0.3cm}
+
+\textbf{Afirmación (d): Verdadera.}
+
+Todo conjunto cuantitativo con $n \ge 1$ posee media definida:
+\[
+\bar{x} = \frac{1}{n}\sum_{i=1}^n x_i.
+\]
+
+---
+
+\section*{Ejercicio 2}
+
+Dado un conjunto de datos y usando la variable \texttt{sc1}, se requiere calcular:
+
+\begin{itemize}
+    \item Promedio
+    \item Desviación estándar
+    \item Índice de asimetría (Skewness)
+    \item Índice de curtosis (Kurtosis)
+\end{itemize}
+
+Los valores obtenidos mediante SPSS fueron:
+
+\[
+\text{Media} = 55.37, 
+\quad
+\text{Desviación estándar} = 23.03,
+\]
+\[
+\text{Asimetría} = -0.19, 
+\quad
+\text{Curtosis} = -0.93.
+\]
+
+\subsection*{Interpretación}
+
+\begin{itemize}
+    \item La media indica un nivel promedio de 55.37 unidades en la variable.
+    \item La desviación estándar muestra una dispersión considerable alrededor de la media.
+    \item La asimetría negativa leve ($-0.19$) indica casi simetría con ligera inclinación a la izquierda.
+    \item La curtosis negativa ($-0.93$) revela una distribución platicúrtica (más aplanada que la normal).
+\end{itemize}
+
+---
+
+\end{document}
+
+
+
